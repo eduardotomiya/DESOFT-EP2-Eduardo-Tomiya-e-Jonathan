@@ -1,4 +1,3 @@
-# DESOFT-EP2-Eduardo-Tomiya-e-Jonathan
 #Primeiro Exercicio
 
 def define_posicoes(linha, coluna, orientacao, tamanho):
