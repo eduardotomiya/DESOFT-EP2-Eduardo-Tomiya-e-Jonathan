@@ -52,36 +52,3 @@ def posiciona_frota(dicionario):
 
 #Quinto Exercicio 
 
-def afundados(dicionario_navios, tabuleiro):
-    navios_afundados = 0
-    for navios in dicionario_navios.values():
-        posicoes = len(navios[0])
-        for j in range(0, len(navios)):
-            i = 0
-            for e in range(0, len(navios[j])):
-                linha = navios[j][e][0]
-                coluna = navios[j][e][1]
-                if tabuleiro[linha][coluna]== 'X':
-                    i += 1
-            if i == posicoes:
-                navios_afundados += 1
-    return navios_afundados
-
-#Sexto Exercicio
-
-def posicao_valida(frota, linha, coluna, orientacao, tamanho):
-    lista_embarcacao_nova= define_posicoes(linha, coluna, orientacao, tamanho)
-    for a in lista_embarcacao_nova:
-        if a[0] > 9 or a[1] > 9:
-                return False
-    for inf in frota.values():
-        q_de_embarcacoes=len(inf)
-        for i in range(0, q_de_embarcacoes):
-            lista_embarcacao=inf[i]
-            for a in lista_embarcacao_nova:
-                if a in lista_embarcacao:
-                    return False
-    return True
-
-#Setimo Exercicio
-
